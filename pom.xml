@@ -4,10 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.opensource.community.archetype</groupId>
-    <artifactId>employee_h2</artifactId>
+    <artifactId>employee</artifactId>
     <version>1.0.0</version>
 
-<properties>
+	<properties>
+		<maven.compiler.plugin>3.8.0</maven.compiler.plugin>
+		<java.source>1.8</java.source>
+		<java.target>1.8</java.target>
+		<findbugs.maven.plugin>3.0.5</findbugs.maven.plugin>
+		<springfox.swagger2>2.3.1</springfox.swagger2>
+		<orika.core>1.5.2</orika.core>
+		<findbugs>2.0.1</findbugs>
+		<reflections>0.9.10</reflections>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -23,10 +31,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>${maven.compiler.plugin}</version>
 				 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.source}</source>
+                    <target>${java.target}</target>
                 </configuration>
 				
 			</plugin>
@@ -89,7 +97,7 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.3.1</version>
+			<version>${springfox.swagger2}</version>
 		</dependency>
 
 		<dependency>
@@ -101,7 +109,7 @@
 		<dependency>
 			<groupId>ma.glasnost.orika</groupId>
 			<artifactId>orika-core</artifactId>
-			<version>1.5.2</version>
+			<version>${orika.core}</version>
 		</dependency>
 
 		<dependency>
@@ -109,17 +117,10 @@
 			<artifactId>validation-api</artifactId>
 		</dependency>
 
-	<!-- <dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.13.Final</version>
-		</dependency>
- -->	
-
 		<dependency>
 			<groupId>com.google.code.findbugs</groupId>
 			<artifactId>findbugs</artifactId>
-			<version>2.0.1</version>
+			<version>${findbugs}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-lang</groupId>
@@ -139,58 +140,19 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.5</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
 		<dependency>
 			<groupId>org.reflections</groupId>
 			<artifactId>reflections</artifactId>
-			<version>0.9.10</version>
+			<version>${reflections}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.googlecode.catch-exception/catch-exception -->
-		<dependency>
-		    <groupId>com.googlecode.catch-exception</groupId>
-		    <artifactId>catch-exception</artifactId>
-		    <version>1.2.0</version>
-		    <scope>test</scope>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/com.googlecode/google-api-translate-java -->
-		<dependency>
-		    <groupId>com.googlecode</groupId>
-		    <artifactId>google-api-translate-java</artifactId>
-		    <version>0.92</version>
-		</dependency>
-		
 		 <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
         
-		<!-- https://mvnrepository.com/artifact/ma.glasnost.orika/orika-eclipse-tools -->
-		<dependency>
-		    <groupId>ma.glasnost.orika</groupId>
-		    <artifactId>orika-eclipse-tools</artifactId>
-		    <version>1.5.2</version>
-		    <scope>test</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-inflector -->
-		<dependency>
-		    <groupId>io.swagger</groupId>
-		    <artifactId>swagger-inflector</artifactId>
-		    <version>1.0.1</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.googlecode.catch-exception/catch-exception -->
-		<dependency>
-		    <groupId>com.googlecode.catch-exception</groupId>
-		    <artifactId>catch-exception</artifactId>
-		    <version>1.1.0</version>
-		    <scope>test</scope>
-		</dependency>
-
 	</dependencies>
 </project>
